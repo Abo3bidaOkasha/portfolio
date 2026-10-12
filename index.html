@@ -3,6 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aboubida Magdy Omar - Full-Stack .NET Developer & Software Engineer. Proficient in ASP.NET Core, C#, Web API, SQL Server, Angular, and Clean Architecture."
+    />
+    <meta
+      name="keywords"
+      content="Aboubida Magdy, .NET Developer, Full Stack Developer, ASP.NET Core, Angular, C#, Web API, SQL Server, ITI Graduate, Software Engineer Portfolio"
+    />
+    <meta name="author" content="Aboubida Magdy Omar" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aboubida Magdy | Full-Stack .NET Developer" />
+    <meta
+      property="og:description"
+      content="Full-Stack .NET Developer with formal training from ITI, building robust, scalable web applications with .NET Core and Angular."
+    />
+    <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -12,14 +29,17 @@
       rel="stylesheet"
     />
 
-    <title>Aboubida</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/perfil.jpg" />
+
+    <title>Aboubida Magdy | Full-Stack .NET Developer</title>
   </head>
   <body>
     <!--===== HEADER =====-->
-    <header class="l-header">
+    <header class="l-header" id="header">
       <nav class="nav bd-grid">
         <div>
-          <a href="#" class="nav__logo">Aboubida Okasha</a>
+          <a href="#" class="nav__logo">Aboubida<span>.NET</span></a>
         </div>
 
         <div class="nav__menu" id="nav-menu">
@@ -31,10 +51,13 @@
               <a href="#about" class="nav__link">About</a>
             </li>
             <li class="nav__item">
+              <a href="#experience" class="nav__link">Experience</a>
+            </li>
+            <li class="nav__item">
               <a href="#skills" class="nav__link">Skills</a>
             </li>
             <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
+              <a href="#work" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
@@ -42,8 +65,13 @@
           </ul>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+        <div class="nav__actions">
+          <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="bx bx-moon" id="theme-icon"></i>
+          </button>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </div>
         </div>
       </nav>
     </header>
@@ -52,33 +80,60 @@
       <!--===== HOME =====-->
       <section class="home bd-grid" id="home">
         <div class="home__data">
+          <span class="home__greeting">Hello, I'm</span>
           <h1 class="home__title">
-            Hi,<br />I'am <span class="home__title-color">Aboubida</span><br />
-            FrontEnd Developer
+            <span class="home__title-color">Aboubida</span> Magdy<br />
+            Omar
           </h1>
+          <p class="home__profession">Full-Stack .NET &amp; Angular Developer</p>
+          <p class="home__subdesc">
+            ITI Graduate (Full-Stack &amp; GenAI) &bull; Clean Architecture &bull; Scalable Enterprise Solutions
+          </p>
 
-          <a href="#" class="button">Contact</a>
+          <div class="home__buttons">
+            <a href="#contact" class="button"><i class="bx bx-paper-plane"></i> Get In Touch</a>
+            <a href="https://github.com/Abo3bidaOkasha" target="_blank" class="button button--outline">
+              <i class="bx bxl-github"></i> GitHub Profile
+            </a>
+          </div>
         </div>
 
         <div class="home__social">
           <a
-            href="https://www.linkedin.com/in/aboubida-okasha-4b5366232/"
+            href="http://www.linkedin.com/in/aboubida-magdy"
             target="_blank"
             class="home__social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="https://x.com/Abo3bida_okasha" class="home__social-icon"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <!-- <a href="https://x.com/Abo3bida_okasha" class="footer__icon"
-            ><i class="bx bxl-twitter"></i
-          ></a> -->
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <i class="bx bxl-linkedin"></i>
+          </a>
           <a
             href="https://github.com/Abo3bidaOkasha"
             class="home__social-icon"
             target="_blank"
-            ><i class="bx bxl-github"></i
-          ></a>
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+          <a
+            href="mailto:aboubidaokasha@gmail.com"
+            class="home__social-icon"
+            aria-label="Email"
+            title="Email"
+          >
+            <i class="bx bx-envelope"></i>
+          </a>
+          <a
+            href="https://x.com/Abo3bida_okasha"
+            target="_blank"
+            class="home__social-icon"
+            aria-label="Twitter"
+            title="Twitter"
+          >
+            <i class="bx bxl-twitter"></i>
+          </a>
         </div>
 
         <div class="home__img">
@@ -97,12 +152,7 @@
               <path
                 d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
               />
-              <image
-                class="home__blob-img"
-                x="100"
-                y="60"
-                href="assets/img/perfil.jpg"
-              />
+              <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.jpg" />
             </g>
           </svg>
         </div>
@@ -110,143 +160,569 @@
 
       <!--===== ABOUT =====-->
       <section class="about section" id="about">
-        <h2 class="section-title">About</h2>
+        <h2 class="section-title">About Me</h2>
 
         <div class="about__container bd-grid">
           <div class="about__img">
-            <img src="assets/img/perfil.jpg" alt="" />
+            <img src="assets/img/perfil.jpg" alt="Aboubida Magdy Omar" />
           </div>
 
-          <div>
-            <h2 class="about__subtitle">I'am Aboubida</h2>
+          <div class="about__content">
+            <h2 class="about__subtitle">I'm Aboubida Magdy Omar</h2>
+            <p class="about__profession-tag">Full-Stack .NET Developer &amp; Programming Instructor</p>
             <p class="about__text">
-              software engineer with hands-on experience in building dynamic and
-              responsive web applications using React and Bootstrap 5.
-              Proficient in translating UI/UX designs into highquality code and
-              passionate about optimizing user experiences and website
-              performance. Familiar with Agile methodologies and version control
-              using Git/GitHub. Continuously learning and improving through
-              real-world projects.
+              Results-driven <strong>Full-Stack .NET Developer</strong> with formal, rigorous training from 
+              <strong>Information Technology Institute (ITI)</strong> in <em>Web &amp; Generative AI Development</em>. 
+              Proficient in <strong>ASP.NET Core (Web API &amp; MVC)</strong>, <strong>C#</strong>, <strong>SQL Server</strong>, 
+              and <strong>Angular</strong>.
             </p>
+            <p class="about__text">
+              Proven expertise in designing robust <strong>RESTful APIs</strong>, applying <strong>Clean Architecture</strong> 
+              &amp; <strong>Repository Patterns</strong>, database optimization with EF Core, and delivering responsive, 
+              user-focused enterprise management solutions (such as e-learning, hotel, booking, and e-commerce platforms).
+            </p>
+
+            <div class="about__education-box">
+              <div class="about__edu-item">
+                <i class="bx bxs-graduation"></i>
+                <div>
+                  <h4>Bachelor's Degree in Medical Informatics</h4>
+                  <p>Faculty of Computers and Artificial Intelligence, Beni Suef University (Graduated 2023)</p>
+                </div>
+              </div>
+              <div class="about__edu-item">
+                <i class="bx bx-award"></i>
+                <div>
+                  <h4>ITI Intensive 9-Month / 6-Month Diploma</h4>
+                  <p>Full-Stack Web &amp; Generative AI Development Using .NET Track</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__info">
+              <div class="about__info-item">
+                <span class="about__info-number">10+</span>
+                <span class="about__info-label">Full-Stack &amp; Web<br />Projects</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-number">ITI</span>
+                <span class="about__info-label">Certified .NET<br />Developer</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-number">Instructor</span>
+                <span class="about__info-label">EYouth &bull; Ministry<br />of Youth &amp; Sports</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== EXPERIENCE & EDUCATION TIMELINE =====-->
+      <section class="experience section" id="experience">
+        <h2 class="section-title">Experience &amp; Training</h2>
+
+        <div class="timeline__container bd-grid">
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">2026 &ndash; Present</span>
+                <h3 class="timeline__title">Programming Instructor</h3>
+                <h4 class="timeline__company">EYouth (Ministry of Youth and Sports)</h4>
+                <p class="timeline__text">
+                  Mentoring future developers through hands-on coding exercises and real-world projects. 
+                  Preparing software curriculum, assignments, and supporting learners with debugging and problem solving.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">2026 &ndash; Present</span>
+                <h3 class="timeline__title">Freelance Full-Stack Developer</h3>
+                <h4 class="timeline__company">Self-Employed / Remote</h4>
+                <p class="timeline__text">
+                  Building full-lifecycle scalable web applications using .NET Core (Web API) backend and Angular frontend. 
+                  Designing database schemas in SQL Server, integrating third-party APIs &amp; payment gateways, and delivering complete UI/UX.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">6 Months Intensive</span>
+                <h3 class="timeline__title">Full-Stack Web &amp; GenAI Trainee (.NET Track)</h3>
+                <h4 class="timeline__company">Information Technology Institute (ITI)</h4>
+                <p class="timeline__text">
+                  Engineered end-to-end applications with ASP.NET Core, EF Core, Angular, SQL Server, and Microservices. 
+                  Applied Clean Architecture, CQRS/Repository pattern, Dependency Injection, and explored Generative AI integration techniques (FastAPI, LLMs).
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline__item">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__date">Jan 2025 &ndash; Jul 2025</span>
+                <h3 class="timeline__title">Front-End Intern</h3>
+                <h4 class="timeline__company">Brainwave Matrix Solutions</h4>
+                <p class="timeline__text">
+                  Developed responsive web components with HTML5, CSS3, JavaScript. Collaborated in Agile sprints, participated in code reviews, and optimized client-side load speed.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!--===== SKILLS =====-->
       <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
 
         <div class="skills__container bd-grid">
-          <div>
-            <h2 class="skills__subtitle">Profesional Skills</h2>
-            <!-- <p class="skills__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              optio id vero amet, alias architecto consectetur error eum eaque
-              sit.
-            </p> -->
+          <!-- Backend & Database -->
+          <div class="skills__group">
+            <h3 class="skills__subtitle"><i class="bx bx-server"></i> Backend &amp; Architecture</h3>
+
             <div class="skills__data">
               <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name">HTML5</span>
+                <i class="bx bx-code-curly skills__icon"></i>
+                <span class="skills__name">C# &amp; .NET Core (Web API / MVC)</span>
               </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                <span class="skills__percentage">95%</span>
-              </div>
+              <div class="skills__bar skills__csharp"></div>
+              <div><span class="skills__percentage">92%</span></div>
             </div>
+
             <div class="skills__data">
               <div class="skills__names">
-                <i class="bx bxl-css3 skills__icon"></i>
-                <span class="skills__name">CSS3</span>
+                <i class="bx bx-data skills__icon"></i>
+                <span class="skills__name">SQL Server &amp; Entity Framework Core</span>
               </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage">85%</span>
-              </div>
+              <div class="skills__bar skills__sql"></div>
+              <div><span class="skills__percentage">90%</span></div>
             </div>
+
             <div class="skills__data">
               <div class="skills__names">
-                <i class="bx bxl-javascript skills__icon"></i>
-                <span class="skills__name">JAVASCRIPT</span>
+                <i class="bx bx-layer skills__icon"></i>
+                <span class="skills__name">Clean Architecture &amp; OOP Principles</span>
               </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage">65%</span>
-              </div>
+              <div class="skills__bar skills__arch"></div>
+              <div><span class="skills__percentage">90%</span></div>
             </div>
-            <!-- <div class="skills__data">
+
+            <div class="skills__data">
               <div class="skills__names">
-                <i class="bx bxs-react skills__icon"></i>
-                <i class="fab fa-react" style="font-size: 24px"></i>
-                <span class="skills__name">React</span>
+                <i class="bx bx-shield-quarter skills__icon"></i>
+                <span class="skills__name">RESTful APIs, JWT &amp; Identity</span>
               </div>
-              <div class="skills__bar skills__ux"></div>
-              <div>
-                <span class="skills__percentage">70%</span>
+              <div class="skills__bar skills__api"></div>
+              <div><span class="skills__percentage">88%</span></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-chip skills__icon"></i>
+                <span class="skills__name">Generative AI Integration (FastAPI/LLMs)</span>
               </div>
-            </div> -->
+              <div class="skills__bar skills__ai"></div>
+              <div><span class="skills__percentage">75%</span></div>
+            </div>
           </div>
 
-          <div>
-            <img src="assets/img/work3.jpg" alt="" class="skills__img" />
+          <!-- Frontend & Tools -->
+          <div class="skills__group">
+            <h3 class="skills__subtitle"><i class="bx bx-code-alt"></i> Frontend &amp; DevOps Tools</h3>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-angular skills__icon"></i>
+                <span class="skills__name">Angular (Routing, RxJS, Components)</span>
+              </div>
+              <div class="skills__bar skills__angular"></div>
+              <div><span class="skills__percentage">85%</span></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-typescript skills__icon"></i>
+                <span class="skills__name">TypeScript &amp; JavaScript (ES6+)</span>
+              </div>
+              <div class="skills__bar skills__ts"></div>
+              <div><span class="skills__percentage">88%</span></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-bootstrap skills__icon"></i>
+                <span class="skills__name">HTML5, CSS3/SCSS &amp; Bootstrap 5</span>
+              </div>
+              <div class="skills__bar skills__bootstrap"></div>
+              <div><span class="skills__percentage">92%</span></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bxl-git skills__icon"></i>
+                <span class="skills__name">Git, GitHub &amp; Version Control</span>
+              </div>
+              <div class="skills__bar skills__git"></div>
+              <div><span class="skills__percentage">90%</span></div>
+            </div>
+
+            <div class="skills__data">
+              <div class="skills__names">
+                <i class="bx bx-wrench skills__icon"></i>
+                <span class="skills__name">Docker, Swagger, Postman, RabbitMQ</span>
+              </div>
+              <div class="skills__bar skills__tools"></div>
+              <div><span class="skills__percentage">78%</span></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!--===== WORK =====-->
+      <!--===== WORK / PROJECTS =====-->
       <section class="work section" id="work">
-        <h2 class="section-title">Work</h2>
+        <h2 class="section-title">Featured Projects</h2>
+
+        <!-- Category Filters -->
+        <div class="work__filters">
+          <button class="work__filter active" data-filter="all">All Projects</button>
+          <button class="work__filter" data-filter="dotnet">.NET &amp; Full-Stack</button>
+          <button class="work__filter" data-filter="angular">Angular</button>
+          <button class="work__filter" data-filter="frontend">Frontend &amp; JS</button>
+        </div>
 
         <div class="work__container bd-grid">
-          <a href="https://abo3bidaokasha.github.io/Techtra/" class="work__img">
-            <img src="assets/img/1.png" style="" alt="" />
-          </a>
-          <a
-            href="https://abo3bidaokasha.github.io/Furniture-Store/"
-            class="work__img"
-          >
-            <img src="assets/img/2.png" alt="" />
-          </a>
-          <a
-            href="https://abo3bidaokasha.github.io/SecondBigPro/"
-            class="work__img"
-          >
-            <img src="assets/img/3.png" alt="" />
-          </a>
-          <a href="https://abo3bidaokasha.github.io/Billeto/" class="work__img">
-            <img src="assets/img/4.png" alt="" />
-          </a>
-          <a
-            href="https://abo3bidaokasha.github.io/Brainwave_Matrix_Intern/"
-            class="work__img"
-          >
-            <img src="assets/img/5.png" alt="" />
-          </a>
-          <a
-            href="https://abo3bidaokasha.github.io/thirdBigPro/"
-            class="work__img"
-          >
-            <img src="assets/img/6.png" alt="" />
-          </a>
+          <!-- 1. SmartEduAcademy (From CV) -->
+          <div class="work__card" data-category="dotnet">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--edu">
+                <i class="bx bxs-graduation project-badge-icon"></i>
+                <span class="project-tag">Featured &bull; Full-Stack AI</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">SmartEduAcademy</h3>
+                  <p class="work__tech">.NET Web API &middot; Angular &middot; Clean Architecture &middot; Python AI (FastAPI, Whisper) &middot; Paymob &middot; JWT</p>
+                  <p class="work__summary">E-learning platform with course management, live sessions, AI lecture transcription, and Paymob payment.</p>
+                  <a href="https://github.com/Abo3bidaOkasha" target="_blank" class="work__link">
+                    <i class="bx bxl-github"></i> View Repo
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">SmartEduAcademy</h4>
+              <span class="work__meta-stack">.NET Core &bull; Angular &bull; AI</span>
+            </div>
+          </div>
+
+          <!-- 2. Shahrazad Hotel (From CV) -->
+          <div class="work__card" data-category="dotnet">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--hotel">
+                <i class="bx bxs-building-house project-badge-icon"></i>
+                <span class="project-tag">Management System</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Shahrazad Hotel System</h3>
+                  <p class="work__tech">ASP.NET Core MVC &middot; SQL Server &middot; EF Core &middot; Bootstrap</p>
+                  <p class="work__summary">Comprehensive hotel management handling room bookings, check-ins/outs, and administrative dashboard.</p>
+                  <a href="http://shahrazad.tryasp.net/" target="_blank" class="work__link">
+                    <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Shahrazad Hotel Management</h4>
+              <span class="work__meta-stack">ASP.NET Core MVC &bull; SQL Server</span>
+            </div>
+          </div>
+
+          <!-- 3. VIÉNA Perfume Platform (From CV) -->
+          <div class="work__card" data-category="angular">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--perfume">
+                <i class="bx bx-spray-can project-badge-icon"></i>
+                <span class="project-tag">Deployed Platform</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">VIÉNA Perfume Platform</h3>
+                  <p class="work__tech">Angular &middot; SCSS &middot; Bootstrap &middot; Custom Routing &middot; Spaceship</p>
+                  <p class="work__summary">Responsive luxury brand web application deployed with custom domain routing and high performance.</p>
+                  <a href="http://vienastore.com/" target="_blank" class="work__link">
+                    <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">VIÉNA Perfume Platform</h4>
+              <span class="work__meta-stack">Angular &bull; SCSS &bull; Deployed</span>
+            </div>
+          </div>
+
+          <!-- 4. Wsalny Bus Booking (From CV) -->
+          <div class="work__card" data-category="dotnet">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--bus">
+                <i class="bx bx-bus project-badge-icon"></i>
+                <span class="project-tag">Booking App</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Wsalny Bus Booking</h3>
+                  <p class="work__tech">ASP.NET Core MVC &middot; SQL Server &middot; Entity Framework</p>
+                  <p class="work__summary">Bus and travel booking application allowing users to search trips, select seats, and manage bookings seamlessly.</p>
+                  <a href="https://mouaslty.runasp.net/" target="_blank" class="work__link">
+                    <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Wsalny Bus Booking</h4>
+              <span class="work__meta-stack">ASP.NET Core MVC &bull; EF Core</span>
+            </div>
+          </div>
+
+          <!-- 5. Football Tickets Booking (From CV) -->
+          <div class="work__card" data-category="dotnet">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--football">
+                <i class="bx bx-football project-badge-icon"></i>
+                <span class="project-tag">Ticketing &amp; Auth</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Football Tickets Reservation</h3>
+                  <p class="work__tech">ASP.NET Core MVC &middot; Identity &middot; SQL Server &middot; Role-Based Access</p>
+                  <p class="work__summary">Secure match reservation system with user roles, ticket quotas, and authenticated booking workflows.</p>
+                  <a href="http://football-booking.runasp.net/" target="_blank" class="work__link">
+                    <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Football Tickets Booking</h4>
+              <span class="work__meta-stack">ASP.NET Core &bull; Identity</span>
+            </div>
+          </div>
+
+          <!-- 6. BStore E-Commerce (From CV) -->
+          <div class="work__card" data-category="dotnet">
+            <div class="work__img">
+              <div class="work__placeholder work__placeholder--store">
+                <i class="bx bx-shopping-bag project-badge-icon"></i>
+                <span class="project-tag">E-Commerce</span>
+              </div>
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">BStore E-Commerce</h3>
+                  <p class="work__tech">ASP.NET Core &middot; SQL Server &middot; EF Core &middot; Shopping Cart</p>
+                  <p class="work__summary">E-commerce store featuring product catalogs, cart management, user authentication, and secure ordering.</p>
+                  <a href="https://bstore.tryasp.net/" target="_blank" class="work__link">
+                    <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="work__meta">
+              <h4 class="work__meta-title">BStore E-Commerce</h4>
+              <span class="work__meta-stack">ASP.NET Core &bull; SQL Server</span>
+            </div>
+          </div>
+
+          <!-- 7. Techtra (Original + in CV) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/Techtra/" target="_blank" class="work__img">
+              <img src="assets/img/1.png" alt="Techtra Tech Company Platform" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Techtra Software Platform</h3>
+                  <p class="work__tech">JavaScript &middot; HTML5 &middot; CSS3 &middot; Responsive</p>
+                  <p class="work__summary">A modern tech company portal showcasing software products and enterprise solutions.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Techtra Tech Showcase</h4>
+              <span class="work__meta-stack">JavaScript &bull; Responsive Web</span>
+            </div>
+          </div>
+
+          <!-- 8. Furniture Store (Original) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/Furniture-Store/" target="_blank" class="work__img">
+              <img src="assets/img/2.png" alt="Furniture Store Project" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Furniture Store</h3>
+                  <p class="work__tech">HTML5 &middot; CSS3 &middot; JavaScript</p>
+                  <p class="work__summary">E-commerce storefront for home and office modern furniture.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Furniture Store</h4>
+              <span class="work__meta-stack">UI/UX &bull; JavaScript</span>
+            </div>
+          </div>
+
+          <!-- 9. SecondBigPro (Original) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/SecondBigPro/" target="_blank" class="work__img">
+              <img src="assets/img/3.png" alt="Second Big Pro Web App" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Second Big Pro</h3>
+                  <p class="work__tech">HTML5 &middot; Bootstrap 5 &middot; JavaScript</p>
+                  <p class="work__summary">Responsive corporate website with dynamic components and modern layout.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Second Big Pro</h4>
+              <span class="work__meta-stack">Bootstrap 5 &bull; JavaScript</span>
+            </div>
+          </div>
+
+          <!-- 10. Billeto (Original + in CV) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/Billeto/" target="_blank" class="work__img">
+              <img src="assets/img/4.png" alt="Billeto Flight Booking" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Billeto Flight Booking</h3>
+                  <p class="work__tech">JavaScript &middot; Bootstrap 5 &middot; HTML5</p>
+                  <p class="work__summary">Flight ticket search and booking interface with responsive flight selectors.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Billeto Flight Booking</h4>
+              <span class="work__meta-stack">Bootstrap 5 &bull; Travel UI</span>
+            </div>
+          </div>
+
+          <!-- 11. Brainwave Matrix (Original + in CV internship) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/Brainwave_Matrix_Intern/" target="_blank" class="work__img">
+              <img src="assets/img/5.png" alt="Brainwave Matrix Internship" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Brainwave Matrix Portal</h3>
+                  <p class="work__tech">HTML5 &middot; CSS3 &middot; JavaScript</p>
+                  <p class="work__summary">Production UI components created during frontend internship at Brainwave Matrix Solutions.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Brainwave Matrix Internship</h4>
+              <span class="work__meta-stack">Internship &bull; Web App</span>
+            </div>
+          </div>
+
+          <!-- 12. ThirdBigPro (Original) -->
+          <div class="work__card" data-category="frontend">
+            <a href="https://abo3bidaokasha.github.io/thirdBigPro/" target="_blank" class="work__img">
+              <img src="assets/img/6.png" alt="Third Big Pro Project" />
+              <div class="work__overlay">
+                <div class="work__overlay-content">
+                  <h3 class="work__title">Third Big Pro</h3>
+                  <p class="work__tech">HTML5 &middot; SCSS &middot; JavaScript</p>
+                  <p class="work__summary">Structured SCSS styling with interactive JavaScript widgets and responsive design.</p>
+                  <span class="work__link"><i class="bx bx-link-external"></i> Live Demo</span>
+                </div>
+              </div>
+            </a>
+            <div class="work__meta">
+              <h4 class="work__meta-title">Third Big Pro</h4>
+              <span class="work__meta-stack">SCSS &bull; Responsive Design</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <!--===== CONTACT =====-->
       <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title">Get In Touch</h2>
 
         <div class="contact__container bd-grid">
-          <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input type="button" value="Send" class="contact__button button" />
+          <!-- Contact Info -->
+          <div class="contact__info">
+            <a href="mailto:aboubidaokasha@gmail.com" class="contact__info-item">
+              <i class="bx bx-envelope contact__info-icon"></i>
+              <div>
+                <h3 class="contact__info-title">Email</h3>
+                <p class="contact__info-text">aboubidaokasha@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+201068048182" class="contact__info-item">
+              <i class="bx bx-phone contact__info-icon"></i>
+              <div>
+                <h3 class="contact__info-title">Phone / WhatsApp</h3>
+                <p class="contact__info-text">+20 106 804 8182</p>
+              </div>
+            </a>
+
+            <a href="http://www.linkedin.com/in/aboubida-magdy" target="_blank" class="contact__info-item">
+              <i class="bx bxl-linkedin contact__info-icon"></i>
+              <div>
+                <h3 class="contact__info-title">LinkedIn</h3>
+                <p class="contact__info-text">linkedin.com/in/aboubida-magdy</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/Abo3bidaOkasha" target="_blank" class="contact__info-item">
+              <i class="bx bxl-github contact__info-icon"></i>
+              <div>
+                <h3 class="contact__info-title">GitHub</h3>
+                <p class="contact__info-text">github.com/Abo3bidaOkasha</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact__form" id="contact-form">
+            <div class="contact__input-group">
+              <input type="text" id="name" placeholder=" " class="contact__input" required />
+              <label for="name" class="contact__label">Your Name</label>
+            </div>
+            <div class="contact__input-group">
+              <input type="email" id="email" placeholder=" " class="contact__input" required />
+              <label for="email" class="contact__label">Your Email</label>
+            </div>
+            <div class="contact__input-group">
+              <input type="text" id="subject" placeholder=" " class="contact__input" />
+              <label for="subject" class="contact__label">Subject</label>
+            </div>
+            <div class="contact__input-group">
+              <textarea id="message" placeholder=" " rows="5" class="contact__input contact__textarea" required></textarea>
+              <label for="message" class="contact__label">Your Message</label>
+            </div>
+            <button type="submit" class="button contact__button">
+              <i class="bx bx-send"></i> Send Message
+            </button>
+            <p class="contact__status" id="contact-status"></p>
           </form>
         </div>
       </section>
@@ -254,20 +730,34 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-      <p class="footer__title">Aboubida Okasha</p>
-      <div class="footer__social">
-        <a href="https://www.facebook.com/Abo3ubida" class="footer__icon"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/abo3ubida/" class="footer__icon"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a href="https://x.com/Abo3bida_okasha" class="footer__icon"
-          ><i class="bx bxl-twitter"></i
-        ></a>
+      <div class="footer__content">
+        <p class="footer__title">Aboubida<span>.NET</span></p>
+        <p class="footer__subtitle">Full-Stack .NET &amp; Angular Developer &bull; ITI Graduate</p>
+        <div class="footer__social">
+          <a href="http://www.linkedin.com/in/aboubida-magdy" target="_blank" class="footer__icon" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://github.com/Abo3bidaOkasha" target="_blank" class="footer__icon" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="mailto:aboubidaokasha@gmail.com" class="footer__icon" aria-label="Email">
+            <i class="bx bx-envelope"></i>
+          </a>
+          <a href="https://x.com/Abo3bida_okasha" target="_blank" class="footer__icon" aria-label="Twitter">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/Abo3ubida" target="_blank" class="footer__icon" aria-label="Facebook">
+            <i class="bx bxl-facebook"></i>
+          </a>
+        </div>
+        <p class="footer__copy">&#169; 2026 Aboubida Magdy Omar. All rights reserved.</p>
       </div>
-      <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
     </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#home" class="scrolltop" id="scroll-top" aria-label="Scroll to top">
+      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
