@@ -104,6 +104,8 @@ body {
   background-color: var(--body-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.7;
+  padding: 5%;
+    padding-top: 0;
 }
 
 h1, h2, h3, h4 {
@@ -1137,6 +1139,8 @@ button {
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
+    padding: 5%;
+    padding-top: 0;
   }
 
   .nav {
